@@ -9,6 +9,3 @@
 - **Projetos Recentes**: Apresentação dos projetos que desenvolvi, com links para repositórios do GitHub e descrições detalhadas de cada um.
 - **Contato**: Informações de contato para potenciais empregadores ou colaboradores que desejem entrar em contato comigo.
 
-
-
-![alt text](<Captura de tela 2024-09-19 090138.png>)
