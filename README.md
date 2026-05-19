@@ -2,7 +2,7 @@
 
 > Bem-vindo ao repositório do meu portfólio pessoal! Este projeto foi desenvolvido para centralizar minha trajetória, apresentar minhas habilidades em Engenharia de Software e DevSecOps, e exibir meus repositórios diretamente do GitHub.
 
-🔗 **Acesse o projeto online:** [felipe-dutra-portfolio](https://new-portfolio-mu-ten-52.vercel.app/)
+🔗 **Acesse o projeto online:** [felipe-dutra-portfolio](https://felipedutra-dev.vercel.app/)
 
 ---
 
