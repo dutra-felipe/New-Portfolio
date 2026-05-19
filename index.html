@@ -1,170 +1,549 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+    <title>Felipe Dutra // DEV</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,700;0,800;1,400&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- SimpleLightbox plugin CSS-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
-    
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-
-    <!-- Bootstrap Icons-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
 </head>
+<body>
 
-<body id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-        <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="#page-top">Portfolio Github</a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#about">Sobre mim</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Tecnologias e Conhecimentos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+    <!-- SCANLINE OVERLAY -->
+    <div class="scanlines" aria-hidden="true"></div>
+    <div class="noise" aria-hidden="true"></div>
+
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#hero">
+                <span class="prompt">~</span><span class="brand-name">felipe@dutra</span><span class="cursor-blink">█</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
+                <span class="toggler-icon">≡</span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#about"><span class="nav-num">01.</span> about</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills"><span class="nav-num">02.</span> skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience"><span class="nav-num">03.</span> exp</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#academic"><span class="nav-num">04.</span> academic</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#achievements"><span class="nav-num">05.</span> certs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#repos"><span class="nav-num">06.</span> repos</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn-terminal" href="assets/cv-new.pdf" target="_blank" rel="noreferrer noopener">
+                            <span>./resume.pdf</span>
+                        </a>
+                    </li>
                 </ul>
+                <button class="theme-toggle ms-lg-3" onclick="toggleTheme()" aria-label="Toggle theme" title="Toggle theme">
+                    <span id="theme-icon">◐</span>
+                </button>
             </div>
         </div>
     </nav>
 
-    <header class="masthead">
-        <div class="container px-4 px-lg-5 h-100">
-                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-                    <div class="col-lg-8 align-self-end">
-                        <h1>Portfolio Github</h1>
-                        <hr class="divider" />
+    <!-- HERO -->
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                
+                <div class="col-lg-7">
+                    <div class="hero-terminal">
+                        <div class="terminal-bar">
+                            <span class="t-dot t-red"></span>
+                            <span class="t-dot t-yellow"></span>
+                            <span class="t-dot t-green"></span>
+                            <span class="t-title">bash — 80×24</span>
+                        </div>
+                        <div class="terminal-body">
+                            <p class="terminal-line"><span class="t-prompt">visitor@portfolio</span><span class="t-at">:</span><span class="t-path">~</span><span class="t-sym">$</span> <span class="t-cmd">whoami</span></p>
+                            <h1 class="glitch-text" data-text="Felipe Dutra">Felipe Dutra</h1>
+                            <p class="terminal-line mt-2"><span class="t-prompt">visitor@portfolio</span><span class="t-at">:</span><span class="t-path">~</span><span class="t-sym">$</span> <span class="t-cmd">cat about.txt</span></p>
+                            <p class="hero-tagline" id="typed-tagline"></p>
+                            
+                        </div>
                     </div>
-                    <div class="col-lg-8 align-self-baseline">
-                        <p class="text-white-75 mb-5">Seja muito bem-vindo(a) ao meu portfólio pessoal! Aqui você encontrará projetos realizados durante as aulas e no âmbito profissional. Espero que goste!</p>
-                        <a class="btn btn-primary btn-xl" href="#about">Ver mais</a>
+                    <div class="hero-cta mt-4">
+                        <a href="#about" class="btn-terminal">cd ./about<span class="arrow">↓</span></a>
                     </div>
                 </div>
-            </div>
-        </header>
-        
-    <section class="page-section bg-primary" id="about">
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <h2 class="text-white mt-0">Conheça mais sobre mim!</h2>
-                    <hr class="divider divider-light" />
-                    <p class="text-white-75 mb-4">Sou um estudante dedicado, com um histórico acadêmico sólido e uma grande paixão por aprendizado contínuo. Atualmente, curso Ciência da Computação no IDP e estou em busca de oportunidades para crescer e aprender nas áreas de desenvolvimento de software e inteligência artificial. Meu principal objetivo é me destacar no mercado de tecnologia, acreditando que a dedicação é fundamental para alcançar o meu máximo potencial e transformar o impossível em realidade. Estou 100% disponível e motivado a participar de práticas inovadoras e desafiadoras.</p>
-                    <a class="btn btn-light btn-xl" href="#services">Conheça Mais!</a>
+
+                <div class="col-lg-5 text-center">
+                    <div class="hero-image-wrapper">
+                        <img src="assets/eu.jpg" alt="Felipe Dutra" class="hero-img">
+                        <div class="img-status">
+                            <span class="status-dot"></span> [ sys.admin_online ]
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
+        <div class="hero-grid" aria-hidden="true"></div>
     </section>
-        
 
-    <section class="page-section" id="services">
-        <div class="container px-4 px-lg-5">
-            <h2 class="text-center mt-0">Tecnologias e Conhecimentos</h2>
-            <hr class="divider" />
-            <div class="row gx-4 gx-lg-5">
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
-                        <div class="mb-2"><i class="bi-code-slash fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">C/C++</h3>
-                        <p class="text-muted mb-0">Programação competitiva e estruturas de dados.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
-                        <div class="mb-2"><i class="bi-file-code fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">JavaScript</h3>
-                        <p class="text-muted mb-0">Desenvolvimento de sites e consumo de APIs.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
-                        <div class="mb-2"><i class="bi-box-seam fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Docker & Git</h3>
-                        <p class="text-muted mb-0">Conhecimentos em containerização e versionamento.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
-                        <div class="mb-2"><i class="bi-bootstrap fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">HTML, CSS & Bootstrap</h3>
-                        <p class="text-muted mb-0">Conhecimento sólido em front-end moderno.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
-                        <div class="mb-2"><i class="bi-graph-up fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Python</h3>
-                        <p class="text-muted mb-0">Modelagem de dados e Machine Learning.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
-                        <div class="mb-2"><i class="bi-layers fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Django</h3>
-                        <p class="text-muted mb-0">Desenvolvimento fullstack e consumo de APIs.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
-                        <div class="mb-2"><i class="bi-server fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">SQL & PostgreSQL</h3>
-                        <p class="text-muted mb-0">Conhecimento de banco de dados relacionais.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
-                        <div class="mb-2"><i class="bi-cup fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Java</h3>
-                        <p class="text-muted mb-0">Programação orientada a objetos.</p>
-                    </div>
-                </div>
+    <!-- ABOUT -->
+    <section id="about" class="page-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="sec-num">01</span>
+                <h2 class="sec-title">about_me<span class="cursor-blink">▌</span></h2>
+                <div class="sec-line"></div>
             </div>
-        </div>
-    </section>
-    
-
-    <section id="repositories">
-        <div id="portfolio">
-            <div class="container-fluid p-0">
-                <div class="row g-0">
-                    <h2 class="text-center mt-0">Meus Projetos</h1>
-                    <div id="repo-list">
-                        <!-- repositórios serão carregados aqui -->
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7">
+                    <div class="terminal-block">
+                        <div class="terminal-bar">
+                            <span class="t-dot t-red"></span><span class="t-dot t-yellow"></span><span class="t-dot t-green"></span>
+                            <span class="t-title">about.txt</span>
+                        </div>
+                        <div class="terminal-body">
+                            <p><span class="t-comment">// estudante de Ciência da Computação @ IDP</span></p>
+                            <p class="mt-2">Desenvolvedor  DevSecOps  cursando  Ciência  da  Computação  (6º  semestre)  com <span class="highlight">IRA 4.53/5.00</span>, com  experiência  prática  em <span class="highlight">back-end  (Python,  FastAPI,  Django,  Flask), front-end  (React)  e  banco  de  dados  (PostgreSQL)</span>   —  entregando  soluções  ponta  a ponta com foco em performance, segurança e escalabilidade.</p>
+                                
+                            <p class="mt-2">Tenho  vivência  real  com  orquestração  de  sistemas  de  IA,  tendo  implementado pipelines de RAG com Qdrant em ambiente govtech, onde revisar criticamente saídas automatizadas  e  integrar  componentes  de  forma  coesa  eram  parte  central  do trabalho.  <span class="highlight">Trabalho  com  Git,  Docker,  Scrum  e  Kanban,  possuo  certificação  AWS</span> e enxergo a IA como uma extensão natural do desenvolvimento. </p>
+                
+                            <p class="mt-3 t-comment">// status: open to opportunities ✓</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-label">// foco atual</span>
+                            <span class="stat-value">Cybersecurity & Cloud Infrastructure</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-label">// formação</span>
+                            <span class="stat-value">CC @ IDP</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-label">// disponível</span>
+                            <span class="stat-value online">● online</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-label">// localização</span>
+                            <span class="stat-value">Brasília, BR</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="page-section bg-dark text-white">
-        <div class="container px-4 px-lg-5 text-center">
-            <h2 class="text-white mt-0">Veja meu currículo!</h2>
-            <a class="btn btn-light btn-xl" href="assets/cv-new.pdf" target="_blank" rel='noreferrer noopener'>Download!</a>
+    <!-- SKILLS -->
+    <section id="skills" class="page-section alt-bg">
+        <div class="container">
+            <div class="section-header">
+                <span class="sec-num">02</span>
+                <h2 class="sec-title">skills.json<span class="cursor-blink">▌</span></h2>
+                <div class="sec-line"></div>
+            </div>
+           <div class="skills-grid">
+
+                <div class="skill-card" data-lang="python">
+                    <i class="devicon-python-plain skill-icon"></i>
+                    <div class="skill-info">
+                        <h4>Python</h4>
+                        <p>ML, Data Modeling, Scripting</p>
+                    </div>
+                    <div class="skill-terminal-level">
+                        <span class="lvl-text">sys.lvl:</span>
+                        <div class="lvl-nodes" data-level="5">
+                            <span class="node"></span><span class="node"></span><span class="node"></span><span class="node"></span><span class="node"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-lang="html">
+                    <i class="devicon-html5-plain skill-icon"></i>
+                    <div class="skill-info">
+                        <h4>HTML & CSS</h4>
+                        <p>Frontend Moderno, Responsivo</p>
+                    </div>
+                    <div class="skill-terminal-level">
+                        <span class="lvl-text">sys.lvl:</span>
+                        <div class="lvl-nodes" data-level="5">
+                            <span class="node"></span><span class="node"></span><span class="node"></span><span class="node"></span><span class="node"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-lang="django">
+                    <i class="devicon-django-plain skill-icon"></i>
+                    <div class="skill-info">
+                        <h4>Django</h4>
+                        <p>Fullstack Dev, REST APIs</p>
+                    </div>
+                    <div class="skill-terminal-level">
+                        <span class="lvl-text">sys.lvl:</span>
+                        <div class="lvl-nodes" data-level="4">
+                            <span class="node"></span><span class="node"></span><span class="node"></span><span class="node"></span><span class="node"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-lang="sql">
+                    <i class="devicon-postgresql-plain skill-icon"></i>
+                    <div class="skill-info">
+                        <h4>SQL & PostgreSQL</h4>
+                        <p>Bancos Relacionais, Queries</p>
+                    </div>
+                    <div class="skill-terminal-level">
+                        <span class="lvl-text">sys.lvl:</span>
+                        <div class="lvl-nodes" data-level="4">
+                            <span class="node"></span><span class="node"></span><span class="node"></span><span class="node"></span><span class="node"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-lang="aws">
+                    <i class="devicon-amazonwebservices-plain-wordmark skill-icon"></i>
+                    <div class="skill-info">
+                        <h4>AWS Cloud</h4>
+                        <p>Certified Cloud Practitioner</p>
+                    </div>
+                    <div class="skill-terminal-level">
+                        <span class="lvl-text">sys.lvl:</span>
+                        <div class="lvl-nodes" data-level="4">
+                            <span class="node"></span><span class="node"></span><span class="node"></span><span class="node"></span><span class="node"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-lang="linux">
+                    <i class="devicon-linux-plain skill-icon"></i>
+                    <div class="skill-info">
+                        <h4>Linux</h4>
+                        <p>CLI, Server Admin, Bash</p>
+                    </div>
+                    <div class="skill-terminal-level">
+                        <span class="lvl-text">sys.lvl:</span>
+                        <div class="lvl-nodes" data-level="4">
+                            <span class="node"></span><span class="node"></span><span class="node"></span><span class="node"></span><span class="node"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-lang="powerbi">
+                    <div class="skill-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                            <rect x="2" y="14" width="5" height="8" rx="1" />
+                            <rect x="9.5" y="8" width="5" height="14" rx="1" />
+                            <rect x="17" y="2" width="5" height="20" rx="1" />
+                        </svg>
+                    </div>
+                    <div class="skill-info">
+                        <h4>Power BI</h4>
+                        <p>Data Viz, Dashboards, DAX</p>
+                    </div>
+                    <div class="skill-terminal-level">
+                        <span class="lvl-text">sys.lvl:</span>
+                        <div class="lvl-nodes" data-level="4">
+                            <span class="node"></span><span class="node"></span><span class="node"></span><span class="node"></span><span class="node"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-lang="c">
+                    <i class="devicon-cplusplus-plain skill-icon"></i>
+                    <div class="skill-info">
+                        <h4>C / C++</h4>
+                        <p>Estruturas de Dados, Competitive</p>
+                    </div>
+                    <div class="skill-terminal-level">
+                        <span class="lvl-text">sys.lvl:</span>
+                        <div class="lvl-nodes" data-level="3">
+                            <span class="node"></span><span class="node"></span><span class="node"></span><span class="node"></span><span class="node"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-lang="js">
+                    <i class="devicon-javascript-plain skill-icon"></i>
+                    <div class="skill-info">
+                        <h4>JavaScript</h4>
+                        <p>Web Dev, Consumo de APIs</p>
+                    </div>
+                    <div class="skill-terminal-level">
+                        <span class="lvl-text">sys.lvl:</span>
+                        <div class="lvl-nodes" data-level="3">
+                            <span class="node"></span><span class="node"></span><span class="node"></span><span class="node"></span><span class="node"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-lang="devops">
+                    <i class="devicon-docker-plain skill-icon"></i>
+                    <div class="skill-info">
+                        <h4>Docker & Git</h4>
+                        <p>Containers, Versionamento</p>
+                    </div>
+                    <div class="skill-terminal-level">
+                        <span class="lvl-text">sys.lvl:</span>
+                        <div class="lvl-nodes" data-level="3">
+                            <span class="node"></span><span class="node"></span><span class="node"></span><span class="node"></span><span class="node"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-lang="react">
+                    <i class="devicon-react-original skill-icon"></i>
+                    <div class="skill-info">
+                        <h4>React</h4>
+                        <p>SPAs, UI Components</p>
+                    </div>
+                    <div class="skill-terminal-level">
+                        <span class="lvl-text">sys.lvl:</span>
+                        <div class="lvl-nodes" data-level="3">
+                            <span class="node"></span><span class="node"></span><span class="node"></span><span class="node"></span><span class="node"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-lang="java">
+                    <i class="devicon-java-plain skill-icon"></i>
+                    <div class="skill-info">
+                        <h4>Java</h4>
+                        <p>POO, Design Patterns</p>
+                    </div>
+                    <div class="skill-terminal-level">
+                        <span class="lvl-text">sys.lvl:</span>
+                        <div class="lvl-nodes" data-level="2">
+                            <span class="node"></span><span class="node"></span><span class="node"></span><span class="node"></span><span class="node"></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
-    <!-- Footer-->
-    <footer class="bg-light py-5">
-        <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2024 - Felipe Dutra</div></div>
+    <!-- Experience -->
+    <section id="experience" class="page-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="sec-num">03</span>
+                <h2 class="sec-title">experience.log<span class="cursor-blink">▌</span></h2>
+                <div class="sec-line"></div>
+            </div>
+            
+            <div class="exp-grid">
+                
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <h4>Estagiário em Desenvolvimento de Software</h4>
+                        <span class="exp-date">Abril/2025 — Atual</span>
+                    </div>
+                    <h5 class="exp-company"><span class="t-prompt">@</span> CNI / SENAI (SUEPS)</h5>
+                    <p class="exp-desc">Atuo no braço de inovação do SENAI no desenvolvimento de soluções tecnológicas para a gestão educacional. Combinando engenharia de dados (ETL) e visualização de informações no Power BI, transformo grandes volumes de dados em inteligência estratégica. No dia a dia, utilizo Python e AppScripts para automatizar fluxos complexos e integrar sistemas via APIs, além de construir aplicações robustas com Django e React. Essa experiência consolidou minha atenção aos detalhes e uma visão crítica sobre a integridade de dados, capacitando-me a identificar anomalias e mitigar riscos operacionais antes que afetem o negócio.</p>
+                    <div class="exp-techs">
+                        <span class="tech-tag">Python (Django)</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">PowerBI</span>
+                        <span class="tech-tag">AppScripts</span>
+                    </div>
+                </div>
+
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <h4>Estagiário em Desenvolvimento de Software</h4>
+                        <span class="exp-date">Dez/2024 — Abril/2025</span>
+                    </div>
+                    <h5 class="exp-company"><span class="t-prompt">@</span> Sinerji</h5>
+                    <p class="exp-desc">No cenário dinâmico de GovTech na Sinerji, atuei no desenvolvimento de soluções de alto impacto e segurança para o setor público. Especializei-me na construção de APIs REST robustas utilizando FastAPI com autenticação JWT, além de estruturar bancos de dados com PostgreSQL. Impulsionando a inovação institucional através de IA, implementei sistemas de RAG (Retrieval-Augmented Generation) com o banco vetorial Qdrant para otimizar a recuperação de informações complexas. Essa experiência acelerou minha curva de aprendizado em arquitetura de software e consolidou um forte mindset voltado à escalabilidade, integridade de sistemas e rigorosa proteção de dados governamentais sensíveis.</p>
+                    <div class="exp-techs">
+                        <span class="tech-tag">Python (FastAPI)</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">IA</span>
+                    </div>
+                </div>
+           </div>
+        </div>
+    </section>
+
+    <!-- Academic -->
+    <section id="academic" class="page-section alt-bg">
+        <div class="container">
+            <div class="section-header">
+                <span class="sec-num">04</span>
+                <h2 class="sec-title">academic_projects/<span class="cursor-blink">▌</span></h2>
+                <div class="sec-line"></div>
+            </div>
+
+            <div class="row g-4">
+                
+                <div class="col-lg-6">
+                    <div class="terminal-block h-100">
+                        <div class="terminal-bar">
+                            <span class="t-dot t-red"></span><span class="t-dot t-yellow"></span><span class="t-dot t-green"></span>
+                            <span class="t-title">proic_security.sh</span>
+                        </div>
+                        <div class="terminal-body">
+                            <p><span class="t-prompt">project</span><span class="t-at">:</span> Extensão de Higiene Digital e Anti-Phishing</p>
+                            <p><span class="t-prompt">target</span><span class="t-at">:</span> Proteção de Idosos no Ambiente Digital</p>
+                            <p class="mt-3">Pesquisa de Iniciação Científica (ProIC) focada em desenvolver uma ferramenta acessível que alerte idosos em tempo real sobre tentativas de golpes e phishing no celular (WhatsApp, SMS), respeitando a LGPD.</p>
+                            <div class="exp-techs mt-3">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">NLP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="terminal-block h-100">
+                        <div class="terminal-bar">
+                            <span class="t-dot t-red"></span><span class="t-dot t-yellow"></span><span class="t-dot t-green"></span>
+                            <span class="t-title">cade_platform.py</span>
+                        </div>
+                        <div class="terminal-body">
+                            <p><span class="t-prompt">project</span><span class="t-at">:</span> Plataforma de Gestão de Documentos (CADE)</p>
+                            <p><span class="t-prompt">metrics</span><span class="t-at">:</span> Redução de >50% no tempo de busca</p>
+                            <p class="mt-3">Plataforma inteligente com suporte trilíngue nativo para indexação e consulta de documentos internos. Utiliza IA e Processamento de Linguagem Natural (NLP) para otimizar a recuperação de conhecimento corporativo.</p>
+                            <div class="exp-techs mt-3">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Django</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">IA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="terminal-block h-100">
+                        <div class="terminal-bar">
+                            <span class="t-dot t-red"></span><span class="t-dot t-yellow"></span><span class="t-dot t-green"></span>
+                            <span class="t-title">gecon_vision.py</span>
+                        </div>
+                        <div class="terminal-body">
+                            <p><span class="t-prompt">project</span><span class="t-at">:</span> Sistema de Reconhecimento Facial (GECON/IDP)</p>
+                            <p><span class="t-prompt">metrics</span><span class="t-at">:</span> +20% de precisão na identificação</p>
+                            <p class="mt-3">Sistema de visão computacional voltado para Compliance e Segurança Digital, desenhado sob as diretrizes da LGPD. Foco na restrição automatizada de acesso de menores de idade a plataformas de apostas online via análise biométrica.</p>
+                            <div class="exp-techs mt-3">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">OpenCV</span>
+                                <span class="tech-tag">Scikit-learn</span>
+                                <span class="tech-tag">LGPD</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="terminal-block h-100">
+                        <div class="terminal-bar">
+                            <span class="t-dot t-red"></span><span class="t-dot t-yellow"></span><span class="t-dot t-green"></span>
+                            <span class="t-title">hackathon_ctf.exe</span>
+                        </div>
+                        <div class="terminal-body">
+                            <p><span class="t-prompt">event</span><span class="t-at">:</span> Hackathon IDP — Capture The Flag</p>
+                            <p><span class="t-prompt">focus</span><span class="t-at">:</span> Cybersecurity & Defense</p>
+                            <p class="mt-3">Competição intensiva focada em segurança cibernética e lógica de programação avançada. Atuação direta na identificação de vulnerabilidades, defesa de sistemas, pentest e resolução de algoritmos.</p>
+                            <div class="exp-techs mt-3">
+                                <span class="tech-tag">C/C++</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Algoritmos</span>
+                                <span class="tech-tag">Cybersecurity</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements" class="page-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="sec-num">05</span>
+                <h2 class="sec-title">certs_and_awards.dat<span class="cursor-blink">▌</span></h2>
+                <div class="sec-line"></div>
+            </div>
+
+            <div class="repos-grid"> 
+                <div class="repo-card">
+                    <div class="repo-card-header">
+                        <span class="repo-icon">☁️</span>
+                        <h5>AWS Certified Cloud Practitioner</h5>
+                    </div>
+                    <p class="repo-desc">Certificação oficial da Amazon Web Services (CLF-C02) comprovando proficiência em conceitos gerais de nuvem, segurança e arquitetura AWS.</p>
+                    <div class="repo-meta">
+                        <span>Emissão: Março, 2026</span>
+                        <span class="pinned-badge">verified</span>
+                    </div>
+                </div>
+
+                <div class="repo-card">
+                    <div class="repo-card-header">
+                        <span class="repo-icon">🏆</span>
+                        <h5>2° Lugar - Melhor Projeto</h5>
+                    </div>
+                    <p class="repo-desc">Competição de melhor projeto e pitch na disciplina de Empreendedorismo e Inovação (IDP).</p>
+                    <div class="repo-meta">
+                        <span>Emissão: Junho, 2024</span>
+                        <span class="pinned-badge">verified</span>
+                    </div>
+                </div>
+
+                <!-- <div class="repo-card">
+                    <div class="repo-card-header">
+                        <span class="repo-icon">⚡</span>
+                        <h5>VI CADathlon Brazil</h5>
+                    </div>
+                    <p class="repo-desc">Competidor selecionado para a maratona focada em resolução de problemas complexos envolvendo algoritmos de roteamento e síntese de circuitos.</p>
+                    <div class="repo-meta">
+                        <span>Julho, 2026</span>
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- REPOS -->
+    <section id="repos" class="page-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="sec-num">06</span>
+                <h2 class="sec-title">projects/<span class="cursor-blink">▌</span></h2>
+                <div class="sec-line"></div>
+            </div>
+            <div id="repo-loading" class="loading-terminal">
+                <span class="t-prompt">fetching</span> github.com/dutra-felipe<span class="dots-anim">...</span>
+            </div>
+            <div id="repo-list" class="repos-grid"></div>
+            <div id="pagination" class="pagination-wrap"></div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <span class="footer-logo"><span class="prompt">~</span>end</span>
+                <span class="footer-copy">Felipe Dutra © 2026</span>
+                <div class="footer-links">
+                    <a href="https://github.com/dutra-felipe" target="_blank" rel="noreferrer noopener" aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.09.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.577.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- SimpleLightbox plugin JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
-    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="app.js"></script>
+    <script src="/js/scripts.js"></script>
 </body>
 </html>
