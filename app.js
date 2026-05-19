@@ -1,8 +1,3 @@
-/* ── GitHub Repos Loader ──────────────────────────────────
-   Fetches pinned repos first, then fills remaining slots
-   with public repos (excluding pinned).
-   ──────────────────────────────────────────────────────── */
-
 const USERNAME  = 'dutra-felipe';
 const PER_PAGE  = 6;
 let currentPage = 1;
@@ -42,7 +37,7 @@ async function fetchPinnedRepos() {
         return (data?.data?.user?.pinnedItems?.nodes) || [];
     } catch (error) {
         console.warn("GraphQL error (Pinned repos):", error);
-        return []; // Retorna vazio se falhar, para tentar listar apenas os normais
+        return [];
     }
 }
 
